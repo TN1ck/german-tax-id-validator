@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "ESNext",
+      "declaration": true,
+      "outDir": "./dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node"
+    },
+    "include": ["index.ts", "test/index.test.ts"],
+    "exclude": ["node_modules", "dist"]
+  }

@@ -1,20 +1,22 @@
 {
   "name": "german-tax-id-validator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple package to validate a german tax ID (Steuerindentifikationsnummer)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "scripts": {
-    "test": "vitest",
-    "build": "npm run build:cjs && npm run build:esm",
-    "build:cjs": "esbuild index.js --bundle --platform=node --outfile=dist/cjs/index.js --format=cjs",
-    "build:esm": "esbuild index.js --bundle --platform=node --outfile=dist/esm/index.js --format=esm"
-  },
+  "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/esm/index.d.ts"
     }
+  },
+  "scripts": {
+    "test": "vitest",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs"
   },
   "repository": {
     "type": "git",
@@ -41,7 +43,7 @@
     "url": "https://github.com/TN1ck/german-tax-id-validator/issues"
   },
   "devDependencies": {
-    "esbuild": "0.21.1",
+    "typescript": "5.4.5",
     "vitest": "1.6.0"
   }
 }
