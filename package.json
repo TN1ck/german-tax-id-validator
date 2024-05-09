@@ -1,0 +1,33 @@
+{
+  "name": "german-tax-id-validator",
+  "version": "1.0.3",
+  "description": "Simple package to validate a german tax-id (Steuerindentifikationsnummer)",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LIQIDTechnology/german-tax-id-validator"
+  },
+  "keywords": [
+    "tax",
+    "german",
+    "steuerindentifikationsnummer",
+    "tax-id",
+    "indentification",
+    "number",
+    "german-tax-id",
+    "validator",
+    "validate"
+  ],
+  "author": "Tom Nick <tomwanick@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LIQIDTechnology/german-tax-id-validator/issues"
+  },
+  "devDependencies": {
+    "mocha": "2.3.4",
+    "chai": "3.4.1"
+  }
+}
