@@ -1,18 +1,29 @@
 {
   "name": "german-tax-id-validator",
-  "version": "1.0.3",
-  "description": "Simple package to validate a german tax-id (Steuerindentifikationsnummer)",
-  "main": "index.js",
+  "version": "1.0.4",
+  "description": "Simple package to validate a german tax ID (Steuerindentifikationsnummer)",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "vitest",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "esbuild index.js --bundle --platform=node --outfile=dist/cjs/index.js --format=cjs",
+    "build:esm": "esbuild index.js --bundle --platform=node --outfile=dist/esm/index.js --format=esm"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TN1ck/german-tax-id-validator"
+    "url": "git+https://github.com/TN1ck/german-tax-id-validator.git"
   },
   "keywords": [
     "tax",
     "german",
+    "steuerliche identifikationsnummer",
     "steuerindentifikationsnummer",
     "tax-id",
     "indentification",
@@ -21,13 +32,16 @@
     "validator",
     "validate"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "Tom Nick <tomwanick@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TN1ck/german-tax-id-validator/issues"
   },
   "devDependencies": {
-    "mocha": "2.3.4",
-    "chai": "3.4.1"
+    "esbuild": "0.21.1",
+    "vitest": "1.6.0"
   }
 }
