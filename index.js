@@ -1,6 +1,6 @@
 /**
  * german-tax-id-validator
- * https://github.com/LIQIDTechnology/german-tax-id-validator
+ * https://github.com/TN1ck/german-tax-id-validator
  *
  * Licensed under the MIT license.
 */

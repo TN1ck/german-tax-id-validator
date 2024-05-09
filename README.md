@@ -1,6 +1,8 @@
 # German Tax Id Validator
 
-This library validates german tax identification numbers, more infos here: http://www.bzst.de/EN/Steuern_National/Steueridentifikationsnummer/steuerid_node.html.
+This library validates german tax identification numbers, more infos here: http://www.bzst.de/EN/Steuern_National/Steueridentifikationsnummer/steuerid_node.html. No dependencies, very small - 1KB minified, 551B Minified + gzipped (see [bundlephobia.com](https://bundlephobia.com/package/german-tax-id-validator@1.0.3)).
+
+I originally developed this while working at [LIQID](https://github.com/LIQIDTechnology), but they made the repository private. This code is the one exported from the [npm package](https://www.npmjs.com/package/german-tax-id-validator). MIT licensed.
 
 ## How to use
 First you neeed to install the package via npm:
