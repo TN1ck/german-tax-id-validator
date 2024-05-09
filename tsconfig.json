@@ -6,7 +6,8 @@
       "outDir": "./dist",
       "strict": true,
       "esModuleInterop": true,
-      "moduleResolution": "node"
+      "moduleResolution": "node",
+      "skipLibCheck": true
     },
     "include": ["index.ts", "test/index.test.ts"],
     "exclude": ["node_modules", "dist"]
