@@ -1,6 +1,6 @@
 {
   "name": "german-tax-id-validator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple package to validate a german tax ID (Steuerindentifikationsnummer)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -8,12 +8,12 @@
   "exports": {
     ".": {
       "import": {
-        "default": "./dist/esm/index.js",
-        "types": "./dist/types/esm/index.d.ts"
+        "types": "./dist/types/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
       },
       "require": {
-        "default": "./dist/cjs/index.js",
-        "types": "./dist/types/cjs/index.d.ts"
+        "types": "./dist/types/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
       }
     }
   },
